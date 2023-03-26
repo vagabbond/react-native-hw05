@@ -6,25 +6,6 @@ const trashImg = require('./trash.png');
 
 const BottomTabs = createBottomTabNavigator();
 
-const  CreatePost =({navigation})=> { return (
-<View style={ styles.postContainer }>
-   <View style={ styles.postImg }>
-      <TouchableOpacity style={ styles.postImgAdd } activeOpacity={0.5}>
-         <FontAwesome name="camera" size={24} color="black" />
-      </TouchableOpacity>
-   </View>
-   <Text style={ styles.postImgText }>Add photo</Text>
-   <View style={ styles.postForm }>
-      <TextInput style={ styles.postName } placeholder="Title..." inputMode="text" />
-      <TextInput style={ styles.postName } placeholder="Location" inputMode="navigation"/>
-      <TouchableOpacity style={ styles.postButton } activeOpacity={0.5}>
-                  <Text style={ styles.postButtonText }>Publicate</Text>
-      </TouchableOpacity>
-   </View>
-</View>
-)};
-
-
 const CreatePostsScreen = ({navigation}) => {
     return (
         <BottomTabs.Navigator screenOptions={{
